@@ -34,4 +34,4 @@ def inputdata(data: InputFile):  # ✅ Proper way
 
     # Predict
     output = model.predict(df)
-    return {"prediction": float(output[0])}
+    return {"prediction1": float(output[0])}
