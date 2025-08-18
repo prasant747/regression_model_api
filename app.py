@@ -22,6 +22,12 @@ class InputFile(BaseModel):
 
 app = FastAPI()
 
+# in your FastAPI app
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
 @app.post("/predict")
 def inputdata(data: InputFile):  # ✅ Proper way
     # Convert input to DataFrame
